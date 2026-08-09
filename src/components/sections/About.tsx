@@ -26,12 +26,11 @@ export function About() {
             ao desenvolvimento full stack.
           </h2>
           <p className="text-foreground/50 leading-relaxed mb-4 text-sm">
-            Engenheiro Mecânico formado, atualmente em transição para Engenharia de Software,
-            com experiência em desenvolvimento de soluções para automação de processos,
-            análise de dados e sistemas internos. Nos últimos anos atuei na indústria metalúrgica,
-            participando da análise de projetos, orçamentos, processos de fabricação e
-            desenvolvimento de ferramentas que reduziram atividades manuais através de Python,
-            VBA, SQL e integrações entre sistemas.
+            Engenheiro Mecânico formado, com experiência em desenvolvimento de soluções para 
+            automação de processos, análise de dados e sistemas internos. Nos últimos anos atuei
+            na indústria metalúrgica, participando da análise de projetos, orçamentos, processos de
+            fabricação e desenvolvimento de ferramentas que reduziram atividades manuais através de 
+            Python, VBA, SQL e integrações entre sistemas.
           </p>
           <p className="text-foreground/50 leading-relaxed text-sm">
             Atualmente concentro meus estudos em desenvolvimento Back-end com ASP.NET Core,
