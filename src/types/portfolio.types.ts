@@ -15,6 +15,9 @@ export interface Project {
   description: string;
   tags: string[];
   status: "Em andamento" | "Concluído";
+  featured?: boolean;
+  repoUrl?: string;
+  liveUrl?: string;
 }
 
 export interface TechCategory {

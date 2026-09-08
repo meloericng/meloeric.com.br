@@ -1,7 +1,7 @@
 
-  # Eric Melo | Portfólio
+  # Portfolio website layout
 
-  This is a code bundle for Eric Melo | Portfólio
+  This is a code bundle for Portfolio website layout. The original project is available at https://www.figma.com/design/IoJihL8vICtZnZ6S5wKID4/Portfolio-website-layout.
 
   ## Running the code
 

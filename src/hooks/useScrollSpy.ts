@@ -1,25 +1,38 @@
 import { useState, useEffect } from "react";
 
-export function useScrollSpy(sectionIds: string[], threshold = 0.35): string {
-  const [activeSection, setActiveSection] = useState(sectionIds[0] ?? "");
+export function useScrollSpy(sectionIds: string[]): string {
+  const [activeSection, setActiveSection] = useState(
+    sectionIds[0] ?? "",
+  );
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
-      },
-      { threshold }
-    );
+    const handleScroll = () => {
+      const scrollPosition =
+        window.scrollY + window.innerHeight * 0.35;
 
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+      let currentSection = sectionIds[0] ?? "";
+
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+
+        if (section && section.offsetTop <= scrollPosition) {
+          currentSection = id;
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
     });
 
-    return () => observer.disconnect();
-  }, [sectionIds, threshold]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [sectionIds]);
 
   return activeSection;
 }

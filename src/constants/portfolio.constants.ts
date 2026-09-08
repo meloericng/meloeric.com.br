@@ -2,9 +2,10 @@ import { Globe, Server, Database, Cpu } from "lucide-react";
 import type { NavLink, TimelineEntry, Project } from "@/types/portfolio.types";
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Sobre", href: "sobre" },
   { label: "Projetos", href: "projetos" },
   { label: "Tecnologias", href: "tecnologias" },
+  { label: "Trajetória", href: "trajetoria" },
+  { label: "Sobre", href: "sobre" },
   { label: "Contato", href: "contato" },
 ];
 
@@ -14,49 +15,49 @@ export const TIMELINE: TimelineEntry[] = [
     role: "Engenharia Mecânica",
     company: "PUC Minas",
     description:
-      "Início da graduação com foco em processos industriais e resolução de problemas.\nPrimeiro contato com programação em C++ utilizando Arduino.",
+      "Início da graduação com foco em processos industriais e resolução de problemas. Primeiro contato com programação em C++ via Arduino.",
   },
   {
     year: "2021",
     role: "Estágio em Manutenção",
-    company: "Primeiro contato com VBA",
+    company: "Indústria de Embalagens Plásticas",
     description:
-      "Gestão de ordens de serviço e análise de manutenção.\nAutomação de processos com VBA e criação de dashboard.",
+      "Gestão de ordens de serviço e análise de manutenção. Automação de processos com VBA e criação de dashboard de indicadores.",
   },
   {
     year: "2023",
     role: "Consolidação Técnica",
-    company: "PUC Minas / Estudos",
+    company: "Formação e estudos",
     description:
       "Aprofundamento em lógica, automação e programação em Python de forma independente.",
   },
   {
     year: "2024",
     role: "Engenharia de Processos",
-    company: "Setor Metalúrgico",
+    company: "Indústria Metalúrgica",
     description:
-      "Planejamento de produção, roteiros de fabricação, leitura de desenhos técnicos e automação de tarefas com VBA.",
+      "Elaboração de ordens de produção, roteiros de fabricação e automação de tarefas repetitivas com VBA e Python.",
   },
   {
     year: "2025",
-    role: "Rectangle Nesting",
-    company: "Projeto Pessoal",
+    role: "Orçamentista",
+    company: "Indústria Metalúrgica",
     description:
-      "Início da elaboração de projetos pessoais para acelerar tarefas rotineiras em Python.",
+      "Elaboração de orçamentos e análise técnica de projetos metalúrgicos.",
   },
   {
     year: "2025",
     role: "Steel Quote",
     company: "Projeto Pessoal",
     description:
-      "Aplicação em Python para análise de ativos financeiros e integração com APIs, visando melhor acompanhamento da carteira de ativos.",
+      "Aplicação em Python para análise de ativos financeiros com integração a APIs e persistência em banco local.",
   },
   {
     year: "2026",
-    role: "Full Stack Developer",
+    role: "Desenvolvedor Full Stack",
     company: "Startup Tech",
     description:
-      "Desenvolvimento full stack com React, TypeScript, .NET, PostgreSQL e Docker, criando APIs, interfaces, automações e dashboards.",
+      "Desenvolvimento full stack com React, TypeScript, .NET, PostgreSQL e Docker, criando APIs, interfaces e dashboards.",
   },
 ];
 
@@ -64,23 +65,26 @@ export const PROJECTS: Project[] = [
   {
     title: "PartnerHub",
     description:
-      "Aplicação full stack para gestão de parceiros, com APIs em .NET e interface em React integrada ao PostgreSQL.",
+      "Aplicação full stack para gestão de parceiros comerciais. Back-end em .NET com autenticação JWT, front-end em React e banco PostgreSQL containerizado com Docker.",
     tags: ["React", "TypeScript", ".NET", "PostgreSQL", "Docker"],
     status: "Em andamento",
-  },
-    {
-    title: "Steel Quote",
-    description:
-      "Aplicação em Python para análise de ativos financeiros, com integração a APIs e persistência em banco local.",
-    tags: ["Python", "SQLite", "APIs"],
-    status: "Em andamento",
+    featured: true,
+    repoUrl: "https://github.com/meloericng",
   },
   {
-    title: "Analytics Dashboard",
+    title: "Releva Dashboard",
     description:
-      "Dashboard analítico no Metabase para acompanhamento de métricas de negócio e performance de usuários.",
+      "Dashboard analítico no Metabase para acompanhamento de métricas de negócio e performance de usuários em tempo real.",
     tags: ["Metabase", "PostgreSQL", "SQL"],
     status: "Concluído",
+  },
+  {
+    title: "Steel Quote",
+    description:
+      "Aplicação em Python para análise de ativos financeiros, com integração a APIs de mercado e persistência em banco local.",
+    tags: ["Python", "SQLite", "APIs REST"],
+    status: "Em andamento",
+    repoUrl: "https://github.com/meloericng",
   },
 ];
 
@@ -88,7 +92,7 @@ export const TECH_CATEGORIES = [
   {
     label: "Frontend",
     icon: Globe,
-    skills: ["React", "TypeScript", "Tailwind CSS"],
+    skills: ["React", "TypeScript", "Tailwind CSS", "JavaScript"],
   },
   {
     label: "Backend",
@@ -103,6 +107,6 @@ export const TECH_CATEGORIES = [
   {
     label: "Ferramentas & Infra",
     icon: Cpu,
-    skills: ["Docker", "Metabase", "Git"],
+    skills: ["Docker", "Git", "Metabase", "Azure"],
   },
 ];
