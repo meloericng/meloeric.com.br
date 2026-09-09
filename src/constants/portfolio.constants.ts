@@ -72,7 +72,7 @@ export const PROJECTS: Project[] = [
     repoUrl: "https://github.com/meloericng",
   },
   {
-    title: "Releva Dashboard",
+    title: "KPI Dashboard",
     description:
       "Dashboard analítico no Metabase para acompanhamento de métricas de negócio e performance de usuários em tempo real.",
     tags: ["Metabase", "PostgreSQL", "SQL"],
